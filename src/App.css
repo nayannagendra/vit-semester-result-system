@@ -1,0 +1,599 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #1c2940;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px max(24px, calc((100% - 1120px) / 2));
+  color: white;
+  background: #142d59;
+}
+
+
+.college-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  min-width: 0;
+}
+
+.college-logo {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.college-details h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.college-details p {
+  margin: 6px 0 0;
+  color: #bdcce7;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 650px) {
+  .college-brand {
+    gap: 12px;
+  }
+
+  .college-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .college-details h2 {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .college-details p {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+.portal-label {
+  padding: 9px 13px;
+  border: 1px solid #48618c;
+  border-radius: 30px;
+  color: #e2eaff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.main-content {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+}
+
+.welcome-section {
+  padding: 39px 0 25px;
+}
+
+.eyebrow {
+  color: #4369b5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome-section h1 {
+  margin: 11px 0;
+  color: #172a4d;
+  font-size: clamp(27px, 4vw, 36px);
+  letter-spacing: -1px;
+}
+
+.welcome-section > p:last-child {
+  max-width: 650px;
+  color: #718097;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.card {
+  margin-bottom: 22px;
+  padding: 27px;
+  border: 1px solid #e3e9f2;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 30px #20375c08;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: #2d54a0;
+  background: #edf2ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.section-title h2,
+.result-heading h2 {
+  margin: 0;
+  color: #20314e;
+  font-size: 19px;
+}
+
+.section-title p {
+  margin: 7px 0 0;
+  color: #8290a5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #3d4b63;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.required {
+  color: #d04455;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  min-height: 45px;
+  padding: 11px 12px;
+  border: 1px solid #dce3ee;
+  border-radius: 9px;
+  outline: none;
+  color: #20314e;
+  background: white;
+  font-size: 12px;
+}
+
+input::placeholder {
+  color: #a0acbd;
+}
+
+input:focus,
+select:focus {
+  border-color: #5278cf;
+  box-shadow: 0 0 0 3px #5278cf19;
+}
+
+.marks-table {
+  width: 100%;
+}
+
+.table-header,
+.subject-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(85px, 0.7fr) minmax(85px, 0.7fr);
+  align-items: center;
+  gap: 15px;
+}
+
+.table-header {
+  padding: 13px 14px;
+  border-radius: 9px;
+  color: #66758e;
+  background: #f3f6fc;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.subject-row {
+  padding: 16px 14px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 12px;
+}
+
+.subject-name {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.subject-code {
+  color: #8a9bc0;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.subject-row input {
+  text-align: center;
+}
+
+.error {
+  color: #c6283e;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.row-error {
+  grid-column: 1 / -1;
+}
+
+.formula-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid #e0e9ff;
+  border-radius: 10px;
+  color: #61728f;
+  background: #f3f7ff;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.formula-note > span {
+  color: #365ead;
+  font-size: 17px;
+}
+
+.formula-note p {
+  margin: 0;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.calculate-btn,
+.reset-btn {
+  min-height: 45px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 750;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.calculate-btn {
+  color: white;
+  background: #234b99;
+}
+
+.calculate-btn:hover {
+  background: #173875;
+}
+
+.calculate-btn span {
+  margin-left: 10px;
+}
+
+.reset-btn {
+  border: 1px solid #dce3ee;
+  color: #42516a;
+  background: white;
+}
+
+.reset-btn:hover {
+  background: #f3f6fb;
+}
+
+.calculate-btn:active,
+.reset-btn:active {
+  transform: scale(0.98);
+}
+
+.result-card {
+  border-top: 4px solid #345eae;
+}
+
+.result-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.result-heading h2 {
+  margin: 9px 0;
+}
+
+.result-heading p {
+  margin: 6px 0;
+  color: #7c899e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.result-status {
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pass {
+  color: #187343;
+  background: #e2f7e9;
+}
+
+.fail {
+  color: #b52c3d;
+  background: #ffe7ea;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.summary-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #e5eaf3;
+  border-radius: 12px;
+  background: #fafbfe;
+}
+
+.summary-box span {
+  color: #7b879b;
+  font-size: 11px;
+}
+
+.summary-box strong {
+  color: #244b94;
+  font-size: clamp(16px, 2.3vw, 23px);
+}
+
+.result-table-header,
+.result-table-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(3, minmax(45px, 0.7fr));
+  align-items: center;
+  gap: 10px;
+  padding: 14px 10px;
+  font-size: 11px;
+}
+
+.result-table-header {
+  color: #6c7a91;
+  background: #f3f6fc;
+  font-weight: 800;
+}
+
+.result-table-row {
+  border-bottom: 1px solid #edf0f5;
+}
+
+.result-table-row strong {
+  color: #244b94;
+}
+
+.disclaimer {
+  margin: 20px 0;
+  color: #8490a3;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.print-btn {
+  margin-top: 2px;
+}
+
+.footer {
+  padding: 26px 15px;
+  color: #8390a4;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.footer strong {
+  color: #34568e;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    min-height: 75px;
+    padding: 13px 16px;
+  }
+
+  .college-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .college-brand h2 {
+    font-size: 16px;
+  }
+
+  .college-brand p {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .portal-label {
+    max-width: 112px;
+    padding: 8px;
+    text-align: center;
+    font-size: 8px;
+  }
+
+  .main-content {
+    width: calc(100% - 24px);
+  }
+
+  .welcome-section {
+    padding-top: 28px;
+  }
+
+  .card {
+    padding: 17px 12px;
+    border-radius: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .table-header,
+  .subject-row {
+    grid-template-columns: minmax(0, 1.5fr) minmax(58px, 0.75fr) minmax(58px, 0.75fr);
+    gap: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .table-header {
+    font-size: 9px;
+  }
+
+  .subject-row {
+    font-size: 10px;
+  }
+
+  .subject-code {
+    display: none;
+  }
+
+  .subject-row input {
+    padding: 9px 3px;
+    font-size: 11px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-box {
+    gap: 7px;
+    padding: 13px;
+  }
+
+  .result-table-header,
+  .result-table-row {
+    grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(35px, 0.65fr));
+    gap: 5px;
+    padding: 12px 4px;
+    font-size: 9px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button-row button {
+    width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .topbar,
+  .welcome-section,
+  form,
+  .footer,
+  .print-btn {
+    display: none !important;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .result-card {
+    border: 0;
+    box-shadow: none;
+  }
+}
+@media (max-width: 650px) {
+  .college-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .college-brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .college-brand h2 {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .college-brand p {
+    font-size: 7px;
+    letter-spacing: 0.3px;
+  }
+}
